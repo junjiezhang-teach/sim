@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 !serialport/win/x64/
+*-build-*/
