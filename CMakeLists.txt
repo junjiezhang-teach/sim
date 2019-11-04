@@ -3,9 +3,10 @@
 #
 cmake_minimum_required(VERSION 3.8)
 #add_definitions(-DTARGET_64)
+SET(BUILD64 1)
 IF (WIN32)
     MESSAGE(STATUS "This is Windows.")
-    IF (CMAKE_CL_64)
+    IF (BUILD64)
         MESSAGE(STATUS "X64")
         set(SERIALPORT_DIR "${CMAKE_SOURCE_DIR}/serialport/win/x64")
     ELSE ()
