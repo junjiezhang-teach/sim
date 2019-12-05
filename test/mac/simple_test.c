@@ -11,17 +11,22 @@ const char *desired_port = "COM1";
 struct sp_port *port;
 enum sp_return;
 
-void list_ports() {
+void list_ports()
+{
     int i;
     struct sp_port **ports;
 
     enum sp_return error = sp_list_ports(&ports);
-    if (error == SP_OK) {
-        for (i = 0; ports[i]; i++) {
+    if (error == SP_OK)
+    {
+        for (i = 0; ports[i]; i++)
+        {
             printf("Found port: '%s'\n", sp_get_port_name(ports[i]));
         }
         sp_free_port_list(ports);
-    } else {
+    }
+    else
+    {
         printf("No serial devices detected\n");
     }
     printf("\n");

@@ -3,7 +3,7 @@
 #
 cmake_minimum_required(VERSION 3.8)
 #add_definitions(-DTARGET_64)
-SET(BUILD64 1)
+SET(BUILD64 0)
 IF (WIN32)
     MESSAGE(STATUS "This is Windows.")
     IF (BUILD64)
